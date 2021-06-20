@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <org.wBHARATmeet.views.backgroundtintlayouts.LinearLayoutWithBackgroundTint
+            android:padding="2dp"
+            android:id="@+id/container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="end"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="@dimen/margin_top_message"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="@dimen/margin_bottom_message"
+            android:background="@drawable/bg_sender_text"
+            android:orientation="vertical"
+            app:linearBgTintColor="#d6eaf8">
+
+            <include layout="@layout/item_reply" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="4dp">
+
+
+                <com.vanniktech.emoji.EmojiTextView
+                    android:id="@+id/tv_message_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:autoLink="web"
+                    android:minWidth="60dp"
+                    android:paddingTop="5dp"
+                    android:textSize="18dp"
+                    android:text="Test"
+                    android:textColor="@color/iconTintColor"
+                    android:textColorLink="#8498fc"
+                    android:textDirection="anyRtl"
+                    app:emojiSize="20sp" />
+
+
+            </LinearLayout>
+
+
+        </org.wBHARATmeet.views.backgroundtintlayouts.LinearLayoutWithBackgroundTint>
+
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/container"
+        android:layout_marginBottom="4dp"
+        android:gravity="right"
+        android:layout_gravity="right"
+        android:layout_marginEnd="10dp"
+        android:orientation="horizontal">
+
+        <TextView    android:fontFamily="@font/intel"
+            android:id="@+id/tv_time"
+            style="@style/SentMessageTimeTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginRight="4dp"
+            android:paddingLeft="4dp"
+            android:text="12:20 AM"
+            android:textColor="@color/gray" />
+
+
+        <ImageView
+            android:id="@+id/message_stat_img"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="10dp"
+            android:foregroundGravity="center"
+            app:srcCompat="@drawable/ic_check" />
+
+
+
+    </LinearLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

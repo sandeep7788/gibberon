@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:orientation="horizontal">
+
+
+    <org.wBHARATmeet.views.backgroundtintlayouts.LinearLayoutWithBackgroundTint
+        android:id="@+id/containerRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/bg_sender_text"
+        android:orientation="horizontal"
+        android:padding="6dp"
+        app:linearBgTintColor="@color/colorBlack">
+
+        <TextView    android:fontFamily="@font/intel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_not_interested_wrapped"
+            android:drawablePadding="4dp"
+            android:drawableTint="@color/white"
+            android:gravity="center"
+            android:text="This message is disappear"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="italic" />
+
+        <TextView    android:fontFamily="@font/intel"
+            android:id="@+id/tv_time"
+            style="@style/SentMessageTimeTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:text="05:08"
+            android:textColor="@color/grey" />
+
+    </org.wBHARATmeet.views.backgroundtintlayouts.LinearLayoutWithBackgroundTint>
+
+    <org.wBHARATmeet.views.backgroundtintlayouts.LinearLayoutWithBackgroundTint
+        android:id="@+id/containerLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/bg_receiver_text"
+        android:orientation="horizontal"
+        android:padding="6dp">
+
+        <TextView    android:fontFamily="@font/intel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_not_interested_wrapped"
+            android:drawablePadding="4dp"
+            android:gravity="center"
+            android:text="This message is disappear"
+            android:textSize="12sp"
+            android:textStyle="italic" />
+
+        <TextView    android:fontFamily="@font/intel"
+            android:id="@+id/tv_receiver_time"
+            style="@style/SentMessageTimeTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:text="05:08"
+            android:textColor="@color/grey" />
+    </org.wBHARATmeet.views.backgroundtintlayouts.LinearLayoutWithBackgroundTint>
+</FrameLayout>

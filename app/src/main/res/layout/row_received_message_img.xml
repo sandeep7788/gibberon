@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <org.wBHARATmeet.views.backgroundtintlayouts.LinearLayoutWithBackgroundTint
+        android:id="@+id/container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginStart="@dimen/margin_bottom_message"
+        android:layout_marginTop="@dimen/margin_top_message"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="@dimen/margin_bottom_message"
+        android:background="@drawable/bg_receiver_text"
+        android:orientation="vertical"
+        app:linearBgTintColor="@color/colorReceiver">
+
+
+        <TextView
+            android:id="@+id/tv_username_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:fontFamily="@font/intel"
+            android:text="test"
+            android:textColor="@color/blue"
+            android:visibility="gone" />
+
+        <include layout="@layout/item_reply" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+
+                android:layout_width="@dimen/img_width"
+                android:layout_height="@dimen/img_height">
+
+                <ImageView
+                    android:id="@+id/img_msg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@android:color/black" />
+
+
+                <RelativeLayout
+                    android:id="@+id/progress_view_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.github.abdularis.buttonprogress.DownloadButtonProgress
+
+                        android:id="@+id/progress_button"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerInParent="true" />
+
+                    <TextView
+                        android:id="@+id/tv_size"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/progress_button"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/rounded_bg"
+                        android:fontFamily="@font/intel"
+                        android:paddingLeft="4dp"
+                        android:paddingTop="2dp"
+                        android:paddingRight="4dp"
+                        android:paddingBottom="2dp"
+                        android:text="4 MB"
+                        android:textSize="12sp" />
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+        </FrameLayout>
+
+    </org.wBHARATmeet.views.backgroundtintlayouts.LinearLayoutWithBackgroundTint>
+
+    <TextView
+        android:id="@+id/tv_time"
+        style="@style/ReceivedMessageTimeTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/container"
+        android:layout_alignBottom="@id/container"
+        android:layout_gravity="bottom|right"
+        android:background="@drawable/bg_tv"
+        android:fontFamily="@font/intel"
+        android:gravity="left"
+        android:paddingLeft="10dp"
+        android:paddingRight="4dp"
+        android:text="12:20 AM"
+        android:textSize="11sp" />
+
+
+</LinearLayout>
+
+

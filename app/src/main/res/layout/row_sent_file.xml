@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:orientation="vertical">
+
+    <org.wBHARATmeet.views.backgroundtintlayouts.LinearLayoutWithBackgroundTint
+        android:id="@+id/container"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="@dimen/margin_top_message"
+        android:layout_marginBottom="@dimen/margin_bottom_message"
+        android:background="@drawable/bg_sender_text"
+        android:orientation="vertical"
+        android:layout_alignParentEnd="true"
+        app:linearBgTintColor="@color/colorBlack">
+
+        <include layout="@layout/item_reply" />
+
+        <RelativeLayout
+            android:id="@+id/file_root_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.github.abdularis.buttonprogress.DownloadButtonProgress
+                android:id="@+id/progress_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:visibility="invisible" />
+
+
+            <ImageView
+                android:id="@+id/file_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/btn_play_bg"
+                android:padding="8dp"
+                app:srcCompat="@drawable/ic_insert_drive_file" />
+
+            <TextView    android:fontFamily="@font/intel"
+                android:id="@+id/tv_file_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_toRightOf="@id/file_icon"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingRight="4dp"
+                android:text="File_20323232-15951.APK"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+
+
+
+            <TextView    android:fontFamily="@font/intel"
+                android:id="@+id/tv_file_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_file_name"
+                android:layout_toRightOf="@id/file_icon"
+                android:text="2.3 MB"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <TextView    android:fontFamily="@font/intel"
+                android:id="@+id/tv_file_extension"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_file_name"
+                android:layout_marginLeft="6dp"
+                android:layout_toRightOf="@id/tv_file_size"
+                android:text="JPG"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_file_extension"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="2dp">
+
+                <ImageView
+                    android:id="@+id/message_stat_img"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginLeft="4dp"
+                    app:srcCompat="@drawable/ic_check" />
+
+
+            </LinearLayout>
+        </RelativeLayout>
+    </org.wBHARATmeet.views.backgroundtintlayouts.LinearLayoutWithBackgroundTint>
+
+    <TextView    android:fontFamily="@font/intel"
+        android:id="@+id/tv_time"
+        style="@style/SentMessageTimeTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10:07 PM "
+        android:layout_alignBottom="@id/container"
+        android:layout_marginStart="8dp"/>
+
+</RelativeLayout>

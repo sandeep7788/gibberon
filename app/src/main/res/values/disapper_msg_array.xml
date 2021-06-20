@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by Reema on 2021
+  -->
+<resources>
+    
+    <string-array name="disappear_msg">
+        <item>Off</item>
+        <item>5 second</item>
+        <item>10 second</item>
+        <item>30 second</item>
+        <item>1 minute</item>
+        <item>5 minute</item>
+        <item>30 minute</item>
+        <item>1 hour</item>
+        <item>6 hour</item>
+        <item>12 hour</item>
+        <item>1 day</item>
+        <item>1 week</item>
+    </string-array>
+
+
+</resources>

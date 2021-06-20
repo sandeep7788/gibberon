@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:emojicon="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/image_view_chat_profile"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="1dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="25dp"
+        android:src="@drawable/user_img_wrapped"
+        android:transitionName="profile_photo_trans"
+        app:civ_border_color="@color/color_green_dark"
+        app:civ_border_width="1dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <org.wBHARATmeet.views.backgroundtintlayouts.LinearLayoutWithBackgroundTint
+            android:id="@+id/container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/margin_top_message"
+            android:background="@drawable/bg_receiver_text"
+            android:orientation="vertical"
+            android:padding="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:linearBgTintColor="@color/colorReceiver">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_username_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/intel"
+                    android:text="test"
+                    android:textColor="@color/blue"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+            <include layout="@layout/item_reply" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="4dp">
+
+
+                <com.vanniktech.emoji.EmojiTextView
+                    android:id="@+id/tv_message_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:autoLink="web"
+                    android:minWidth="60dp"
+                    android:paddingTop="5dp"
+                    android:text="Test"
+                    android:textColor="@color/iconTintColor"
+                    android:textColorLink="#8498fc"
+                    android:textDirection="anyRtl"
+                    android:textSize="18dp"
+                    app:emojiSize="20sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:gravity="right"
+                android:orientation="horizontal"
+
+                >
+
+
+            </LinearLayout>
+        </org.wBHARATmeet.views.backgroundtintlayouts.LinearLayoutWithBackgroundTint>
+
+        <TextView
+            android:id="@+id/tv_time"
+            style="@style/ReceivedMessageTimeTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/container"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:fontFamily="@font/intel"
+            android:gravity="right"
+            android:paddingRight="4dp"
+            android:text="12:20 AM"
+            android:textColor="@color/gray" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

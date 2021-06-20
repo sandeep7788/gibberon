@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:orientation="horizontal">
+
+
+    <org.wBHARATmeet.views.backgroundtintlayouts.LinearLayoutWithBackgroundTint
+        android:id="@+id/container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/bg_sender_text"
+        android:backgroundTint="#d6eaf8"
+        android:orientation="horizontal"
+        android:padding="6dp"
+        app:linearBgTintColor="#d6eaf8">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_not_interested_wrapped"
+            android:drawablePadding="4dp"
+            android:drawableTint="@color/iconTintColor"
+            android:fontFamily="@font/intel"
+            android:gravity="center"
+            android:text="@string/you_deleted_this_message"
+            android:textColor="@color/iconTintColor"
+            android:textSize="12sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            style="@style/SentMessageTimeTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:fontFamily="@font/intel"
+            android:text="05:08"
+            android:textColor="@color/iconTintColor" />
+    </org.wBHARATmeet.views.backgroundtintlayouts.LinearLayoutWithBackgroundTint>
+</FrameLayout>
